@@ -1,0 +1,17 @@
+option java_package = "protos";
+option java_outer_classname = "HashTabOperationProtos";
+
+message HashTabOperation {
+    required OperationType type = 1;
+    required int32 value = 2;
+	required string key = 3;
+
+    enum OperationType{
+        CONTAINS = 0;
+        GET= 1;
+		PUT = 2;
+		RMV=3;
+		ACK =4;
+        NACK = 5;
+    }
+}
